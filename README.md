@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# 🏙 House Sharing Service
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📃프로젝트 소개
+* 프로젝트 명 : MBTI와 각종 성향을 AI가 분석하여 개인별 꼭 맞는 룸메이트들이 있는 곳으로 집을 추천해줌
+* 서비스 설명 : 최근 생산인구 수도권 집중화로 전세 자금이 없는 사회 초년생들이 상대적으로 싼 값에 수도권 생활을 할 수 있도록 도와주고, 개인별 성향을 분석하여 트러블이 없는 맞춤형 집을 추천해줌.
 
-## Available Scripts
+## 📅 프로젝트 기간
+2023.01.16 ~ 2023.01.31 (2주)
 
-In the project directory, you can run:
+## 주요기능
+1. AI가 성향을 엄선하여 골라준 추천 하우스쉐어링 매물 추천
+2. 집주인과의 Direct Message
+3. 결제
+4. Detail한 필터링 기능
+5. 좋아요 를 통한 관심 매물 등록
+6. 매물 등록
 
-### `npm start`
+## 🔧 사용 도구 및 기술
+<table>
+    <tr>
+        <th>구분</th>
+        <th>내용</th>
+    </tr>
+    <tr>
+        <td>사용언어</td>
+        <td>
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"/>
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"/>
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>라이브러리 & 프레임워크</td>
+        <td>
+            <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/>
+            <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
+            <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>개발도구</td>
+        <td>
+            <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+            <img src="https://img.shields.io/badge/WebStorm-000000?style=for-the-badge&logo=WebStorm&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=Anaconda&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>서버환경</td>
+        <td>
+            <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>데이터베이스</td>
+        <td>
+            <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"/>
+        </td>
+    </tr>
+    <tr>
+        <td>협업도구</td>
+        <td>
+            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/>
+            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white"/>
+            <img src="https://img.shields.io/badge/Sourcetree-0052CC?style=for-the-badge&logo=Sourcetree&logoColor=white"/>
+        </td>
+    </tr>
+</table>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌E-R Diagram
+<사진>
 
-### `npm test`
+## 💻화면 구성
+1. 메인페이지
+- <사진>
+2. 상세페이지
+- <사진>
+3. 결제페이지
+- <사진>
+4. 매물 등록페이지
+- <사진>
+5. 회원 수정 페이지
+- <사진>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👨‍👩‍👦‍👦 팀원 역할
+<table>
+  <tr>
+    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
+    <td align="center"><img src="https://item.kakaocdn.net/do/fd49574de6581aa2a91d82ff6adb6c0115b3f4e3c2033bfd702a321ec6eda72c" width="100" height="100"/></td>
+    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
+  </tr>
 
-### `npm run build`
+  <tr>
+    <td align="center"><strong>강정우</strong></td>
+    <td align="center"><strong>이상민</strong></td>
+    <td align="center"><strong>이형준</strong></td>
+  </tr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <tr>
+    <td align="center"><b>Frontend, Backend, AWS</b></td>
+    <td align="center"><b>Ai 모델링, 서버 구축, Backend</b></td>
+    <td align="center"><b>결제 기능, Frontend, Backend</b></td>
+  </tr>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   <tr>
+    <td align="center"><strong>리액트 웹 프로젝트 설계<br>메인 페이지 제작</strong></td>
+    <td align="center"><strong>NLP기반 AI 모델링<br>서버 구축<br>DB 작성</strong></td>
+    <td align="center"><strong>결제 페이지<br>결제기능 구현</strong></td>
+  </tr>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  <tr>
+    <td align="center"><a href="https://github.com/Kang-Jeong-Woo" target='_blank'>정우의 github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+  </tr>
+</table>
