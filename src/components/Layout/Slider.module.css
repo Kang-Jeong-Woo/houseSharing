@@ -1,0 +1,50 @@
+.section {
+    display: inline-flex;
+}
+
+.section input[id*="slide"] {
+    display: none;
+}
+
+.section .slidewrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section .slidelist {
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.section .slidelist > div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.section .slidelist > div > a {
+    display: block;
+    position: relative;
+}
+
+.section .slidelist > div > a img {
+    width: 100%;
+}
+
+.section .slidelist label {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.section .slidelist .left {
+    left: 30px;
+}
+
+.section .slidelist .right {
+    right: 30px;
+}
