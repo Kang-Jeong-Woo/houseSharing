@@ -10,6 +10,7 @@ function App() {
   return (
       <Layout>
           <h1>여기가 네비</h1>
+          <h2>test in mac</h2>
           <Slider/>
           <Routes>
               <Route path='/' exact={true} element={<Main/>}/>
