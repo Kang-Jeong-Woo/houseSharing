@@ -1,0 +1,7 @@
+.container {
+    margin: 0px auto;
+    padding: 35px 0px;
+    width: 85%;
+    max-width: 83rem;
+    position: relative;
+}

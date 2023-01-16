@@ -1,8 +1,25 @@
 import {Fragment} from "react";
+import Card from "../UI/Card";
+import classes from "./Main.module.css";
+
+
 
 const NewRegForm = props => {
+
+
     return(<Fragment>
-        <h1>메인 페이지</h1>
+        <Card>
+            <div className={classes.container}>
+                <div>
+                    <img src="" alt=""/>
+                </div>
+                <div>
+                    <div className={classes.title}></div>
+                    <div className={classes.content}></div>
+                    <div className={classes.note}></div>
+                </div>
+            </div>
+        </Card>
     </Fragment>)
 }
 

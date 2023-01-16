@@ -5,7 +5,7 @@ const Navigation = props => {
     return(
         <div className={classes.navigation}>
             <div className={classes.wrapper}>
-                <div><FontAwesomeIcon icon={faBars}/></div>
+                <div><FontAwesomeIcon icon={faBars} className={classes.menu}/></div>
                 <div>
                     <span>사용자이름</span>
                     <span>사진</span>

@@ -1,0 +1,10 @@
+.container {
+    width: 80%;
+    display: flex;
+}
+.container img {
+    width: 10rem;
+}
+.title {
+
+}
