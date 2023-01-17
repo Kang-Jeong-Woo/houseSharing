@@ -1,10 +1,17 @@
 .container {
     width: 80%;
-    display: flex;
 }
 .container img {
     width: 10rem;
 }
 .title {
+    font-size: x-large;
+    font-weight: bolder;
+}
+.content {
+
+}
+.hashtag {
+    color: cadetblue;
 
 }
