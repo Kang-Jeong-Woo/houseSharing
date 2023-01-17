@@ -16,6 +16,19 @@
     background-color: white;
     position: relative;
 }
+.menuIcon{
+    display: flex;
+    position: absolute;
+    left: 0;
+}
 .menu {
     cursor: pointer;
+}
+.menuOn {
+    transition: 1s;
+    transform: translateX(210px);
+}
+.menuOff {
+    transition: 1s;
+    transform: translateX(-210px);
 }

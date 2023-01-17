@@ -1,8 +1,8 @@
 import {Fragment} from "react";
 import Card from "../UI/Card";
 import classes from "./Main.module.css";
-import 반포자이 from "../../assets/반포자이.png";
-import 한남더힐 from "../../assets/한남더힐.png";
+import 반포자이 from "../../assets/img/반포자이.png";
+import 한남더힐 from "../../assets/img/한남더힐.png";
 
 const houseList = [
     {
@@ -33,7 +33,7 @@ const NewRegForm = props => {
             {houseList.map(house=>(
                 <Card>
                 <div>
-                    <img src={house.img} alt=""/>
+                    <img key={house.id} src={house.img} alt=""/>
                 </div>
                 <div>
                 <div className={classes.title}>{house.title}</div>

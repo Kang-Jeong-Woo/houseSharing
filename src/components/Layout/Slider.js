@@ -1,9 +1,6 @@
 import classes from "./Slider.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import image1 from "../../assets/img1.png";
-import image2 from "../../assets/img2.png";
-import image3 from "../../assets/img3.png";
 import {useRef, useState, useEffect, Fragment} from "react";
 import SliderAD from "./SliderAD";
 

@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Leferi';
+    src:url('LeferiBaseRegular.ttf') format('ttf'),
+    url("LeferiPointBlack.ttf") format("ttf");
+}

@@ -1,7 +1,7 @@
-import image1 from "../../assets/spring.png";
-import image2 from "../../assets/summer.png";
-import image3 from "../../assets/fall.png";
-import image4 from "../../assets/winter.png";
+import image1 from "../../assets/img/spring.png";
+import image2 from "../../assets/img/summer.png";
+import image3 from "../../assets/img/fall.png";
+import image4 from "../../assets/img/winter.png";
 import classes from "./SliderAD.module.css";
 
 const mockupList = [
