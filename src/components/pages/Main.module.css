@@ -1,17 +1,24 @@
 .container {
-    width: 80%;
+    padding-bottom: 2rem;
 }
 .container img {
-    width: 10rem;
+    width: 20rem;
+}
+.content {
+    padding: 1%;
 }
 .title {
     font-size: x-large;
     font-weight: bolder;
+    padding: 1% 0;
 }
-.content {
-
+.comment {
+    padding: 1% 0;
 }
 .hashtag {
     color: cadetblue;
-
+    padding: 1% 0;
+}
+.cardContainer {
+    width: 70vh;
 }

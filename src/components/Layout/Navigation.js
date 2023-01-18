@@ -24,8 +24,9 @@ const Navigation = props => {
                 <div className={`${menuOn ? menuOnClass : menuOffClass}`}>
                     <Sidebar onMenuOff={menuOffTrigger}/>
                 </div>
-                <div className={classes.menuIcon}><FontAwesomeIcon icon={faBars} className={classes.menu}
-                                                                   onClick={menuOnTrigger}/></div>
+                <div className={classes.menuIcon}>
+                    <FontAwesomeIcon icon={faBars} className={classes.menu}
+                                     onClick={menuOnTrigger}/></div>
                 <div>
                     <span>사용자이름</span>
                     <span>사진</span>
