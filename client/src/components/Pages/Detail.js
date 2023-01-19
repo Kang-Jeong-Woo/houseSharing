@@ -3,6 +3,10 @@ import {useLocation} from "react-router-dom";
 import loading from "../../assets/img/loading.gif"
 import classes from "./Detail.module.css";
 import Page from "../UI/Page";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeart} from "@fortawesome/free-solid-svg-icons";
+import {far} from "@fortawesome/free-regular-svg-icons";
+
 
 const Detail = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -27,18 +31,22 @@ const Detail = () => {
     return(
         <Page>
             <div className={classes.totalCntnr}>
-            <div className={classes.titleCntnr}>
-                <div></div>
-                <div></div>
+                <div className={classes.titleCntnr}>
+                    <div>{loadedHouse.name}</div>
+                    <div>{loadedHouse.address}</div>
+                    {/*<FontAwesomeIcon icon={[far , Heart]}/>*/}
+                </div>
+                <div className={classes.imgCntnr}>
+                    <img src={loadedHouse.img} alt={loadedHouse.name}/>
+                </div>
+                <div className={classes.descCntnr}>
+                    <div className={classes.desc}></div>
+                    <div className={classes.payment}></div>
+                </div>ㅏ
+                <div className={classes.reviewCntnr}>{"여기가 후기 section"}</div>
+                <div className={classes.locationCntnr}>{"여기가 카카오 지도"}</div>
+                <div className={classes.hostCntnr}>{"여기가 집주인 소통 창구"}</div>
             </div>
-            <div className={classes.imgCntnr}></div>
-
-            </div>
-            <div className={classes.descCntnr}></div>
-            <div className={classes.reviewCntnr}></div>
-            <div className={classes.locationCntnr}></div>
-            <div className={classes.hostCntnr}></div>
-
 
 
 

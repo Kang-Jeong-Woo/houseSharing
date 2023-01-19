@@ -3,7 +3,6 @@ import comLogo from "../../assets/img/comLogo.png"
 import userImg from "../../assets/img/img3.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faX} from "@fortawesome/free-solid-svg-icons";
-import {useRef} from "react";
 
 const Sidebar = props => {
 

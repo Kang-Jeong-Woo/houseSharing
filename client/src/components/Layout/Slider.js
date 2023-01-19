@@ -1,11 +1,8 @@
 import classes from "./Slider.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import {useRef, useState, useEffect, Fragment} from "react";
+import {useRef, useState, useEffect} from "react";
 import SliderAD from "./SliderAD";
-
-
-
 
 const Slider = props => {
     const slideRef = useRef();
