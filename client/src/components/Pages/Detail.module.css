@@ -3,6 +3,13 @@
 }
 .block {
     display: block;
+    height: 50%;
+    align-items: center;
+    display: flex;
+}
+.center {
+    display: flex;
+    align-items: center;
 }
 .m10 {
     margin: 10px auto;
@@ -24,19 +31,40 @@
 
 }
 .descCntnr {
-
+    display: flex;
 }
 .desc {
-
+    width: 80%;
 }
-.payment {
-    width: 400px;
+.paymentForm {
+    width: 25%;
     height: 300px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: sticky;
+    top: 10%;
+    padding: 2rem;
 }
-.payment input {
-    border: none;
+.payInfo {
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.infoForm {
+    width: 100%;
+    height: 7rem;
+    border: #666666 1px solid;
+    border-radius: 1rem;
+}
+.pplCnt {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    width: 260px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
 }
 .reviewCntnr {
 
