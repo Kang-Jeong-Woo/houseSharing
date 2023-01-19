@@ -1,8 +1,8 @@
-import {Fragment, useEffect, useState} from "react";
-import {Link, useLocation} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 import loading from "../../assets/img/loading.gif"
-import classes from "./Main.module.css";
-import Card from "../UI/Card";
+import classes from "./Detail.module.css";
+import Page from "../UI/Page";
 
 const Detail = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -20,13 +20,30 @@ const Detail = () => {
         });
     }, []);
 
-
     if(isLoading){
         return (<img src={loading} alt="loading..."/>)
     }
 
     return(
-        <Card>
+        <Page>
+            <div className={classes.totalCntnr}>
+            <div className={classes.titleCntnr}>
+                <div></div>
+                <div></div>
+            </div>
+            <div className={classes.imgCntnr}></div>
+
+            </div>
+            <div className={classes.descCntnr}></div>
+            <div className={classes.reviewCntnr}></div>
+            <div className={classes.locationCntnr}></div>
+            <div className={classes.hostCntnr}></div>
+
+
+
+
+
+
             <div className={classes.container}>
                 <img key={loadedHouse.id} src={loadedHouse.img} alt={loadedHouse.name}/>
                 <div className={classes.content}>
@@ -35,7 +52,7 @@ const Detail = () => {
                     <div className={classes.hashtag}>{loadedHouse.hashtag}</div>
                 </div>
             </div>
-        </Card>
+        </Page>
     )
 }
 

@@ -1,7 +1,7 @@
 .navigation {
     display: flex;
     width: 100%;
-    border: black 1px solid;
+    border-bottom: lightgrey 1px solid;
     justify-content: center;
     position: fixed;
     z-index: 99;
@@ -9,7 +9,7 @@
 }
 .wrapper {
     width: 80%;
-    height: 3rem;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;

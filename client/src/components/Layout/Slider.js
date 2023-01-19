@@ -33,11 +33,11 @@ const Slider = props => {
 
     return (
         <div className={classes.slider}>
-            <button onClick={moveToPrevSlide}>prev</button>
+            <FontAwesomeIcon icon={faChevronLeft} onClick={moveToPrevSlide} className={classes.arrowButton}/>
             <div className={classes.wrapper}>
                 <SliderAD slideRef={slideRef} onCount={slideCounter}/>
             </div>
-            <button onClick={moveToNextSlide}>next</button>
+            <FontAwesomeIcon icon={faChevronRight} onClick={moveToNextSlide} className={classes.arrowButton}/>
         </div>
     )
 }

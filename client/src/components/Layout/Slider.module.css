@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     margin: 3% 0;
+    align-items: center;
 }
 
 .wrapper {
@@ -20,4 +21,9 @@
 img {
     width: 100%;
     height: 300px;
+}
+
+.arrowButton {
+    height: 10vh;
+    max-width: 2vw;
 }

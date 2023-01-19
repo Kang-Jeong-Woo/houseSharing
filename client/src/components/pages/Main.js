@@ -1,10 +1,9 @@
 import {Fragment, useEffect, useState} from "react";
 import Card from "../UI/Card";
 import classes from "./Main.module.css";
-import 반포자이 from "../../assets/img/반포자이.png";
-import 한남더힐 from "../../assets/img/한남더힐.png";
 import {Link} from "react-router-dom";
 import loading from "../../assets/img/loading.gif";
+import Slider from "../Layout/Slider";
 
 const NewRegForm = props => {
     const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +34,7 @@ const NewRegForm = props => {
     }
 
     return (<Fragment>
+        <Slider/>
         {loadedHouseList.map(house => (
             <div className={classes.container}>
                 <Link to={"/detail"} state={{houseId: house.id}}>
