@@ -14,8 +14,15 @@
 .m10 {
     margin: 10px auto;
 }
+.m1rem {
+    margin: 1rem 0;
+}
 .titleCntnr {
 
+}
+.addressCntnr{
+    display: flex;
+    justify-content: space-between;
 }
 .title {
     font-size: xx-large;
@@ -32,18 +39,22 @@
 }
 .descCntnr {
     display: flex;
+    align-self: flex-start;
 }
 .desc {
     width: 80%;
+    height: 150vh;
+    background-color: #666666;
+    margin-bottom: 2%;
 }
 .paymentForm {
     width: 25%;
-    height: 300px;
+    height: 270px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: sticky;
-    top: 10%;
     padding: 2rem;
+    top : 80px;
 }
 .payInfo {
     font-size: x-large;
@@ -54,24 +65,62 @@
     height: 7rem;
     border: #666666 1px solid;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
-.pplCnt {
+.pplCntCntnr {
     display: flex;
     align-items: center;
-    margin: 0px;
-    width: 260px;
-    height: 32px;
-    font-size: 15px;
-    border: 0;
-    border-radius: 15px;
-    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-top: #666666 1px solid;
+    align-content: center;
+    justify-content: space-between;
+    position: relative;
 }
-.reviewCntnr {
+.pplCntIcon {
+    display: flex;
+    margin: 0px;
+}
+.none {
+    text-decoration-line: none;
+}
+.payment {
+    width: 100%;
+    height: 60px;
+    border-radius: 18px;
+    background-color: blue;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 60px;
+    font-size: x-large;
+    color: white;
+}
+.pplPick {
+    width: 100%;
+    position: absolute;
+    top : 5rem;
+    left: -1vh;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 
+.reviewCntnr {
+    height: 30vh;
+    background-color: #666666;
+    margin-bottom: 2%;
+    width: 100%;
 }
 .locationCntnr {
-
+    height: 30vh;
+    background-color: #666666;
+    margin-bottom: 2%;
+    width: 100%;
 }
 .hostCntnr {
-
+    height: 30vh;
+    background-color: #666666;
+    margin-bottom: 2%;
+    width: 100%;
 }

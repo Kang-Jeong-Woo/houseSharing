@@ -1,12 +1,24 @@
-import {useEffect, useState} from "react";
+import {Fragment, useEffect, useReducer, useState} from "react";
 import {Link, useLocation} from "react-router-dom";
 import loading from "../../assets/img/loading.gif"
 import classes from "./Detail.module.css";
 import Page from "../UI/Page";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHeart} from "@fortawesome/free-solid-svg-icons";
-import {far} from "@fortawesome/free-regular-svg-icons";
-import {DatePicker} from "antd";
+import {faHeart, faChevronUp, faChevronDown, faBaby, faChild, faPerson} from "@fortawesome/free-solid-svg-icons";
+import {DatePicker, InputNumber} from "antd";
+
+const pplInitState = {Adult: 1, Child: 0, Baby: 0};
+
+const pplStateReducer = (state, action) => {
+    if (action.type === "adult") {
+        return {Adult: action.value, Baby: action.state.baby, Child: action.state.child}
+    } else if (action.type === "child") {
+        return {Adult: action.state.adult, Baby: action.state.baby, Child: action.value}
+    } else if (action.type === "baby") {
+        return {Adult: action.state.adult, Baby: action.value, Child: action.state.child}
+    }
+    return pplInitState
+}
 
 const Detail = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -16,6 +28,9 @@ const Detail = () => {
     const [isDaySlt, setIsDaySlt] = useState(false);
     const location = useLocation();
     const {RangePicker} = DatePicker;
+    const [isClicked, setIsClicked] = useState(false);
+    const [btnOk, setBtnOk] = useState(false);
+    const [pplState, dispatchPplState] = useReducer(pplStateReducer, pplInitState);
 
     useEffect(() => {
         setIsLoading(true);
@@ -31,14 +46,25 @@ const Detail = () => {
     if (isLoading) {
         return (<img src={loading} alt="loading..."/>)
     }
+    ;
 
-    const dateTrigger = (date) => {
+    const dateTrigger = date => {
         setIsDaySlt(true);
         setDayCnt((date[1].$d - date[0].$d) / 24 / 60 / 60 / 1000);
-    }
+    };
 
-    const inputTrigger = (event) => {
-        setPplCnt(event.target.value);
+    const pplSltTrigger = () => {
+        setIsClicked(!isClicked);
+    };
+
+    const pplPickTriggerA = value => {
+        dispatchPplState({type: "adult", value: value, state: {baby: pplState.Baby, child: pplState.Child}});
+    }
+    const pplPickTriggerC = value => {
+        dispatchPplState({type: "child", value: value, state: {adult: pplState.Adult, baby: pplState.Baby}});
+    }
+    const pplPickTriggerB = value => {
+        dispatchPplState({type: "baby", value: value, state: {adult: pplState.Adult, child: pplState.Child}});
     }
 
     return (
@@ -47,8 +73,12 @@ const Detail = () => {
 
                 <div className={classes.titleCntnr}>
                     <div className={classes.title}>{loadedHouse.name}</div>
-                    <div>{loadedHouse.address}</div>
-                    {/*<FontAwesomeIcon icon={[far , Heart]}/>*/}
+                    <div className={classes.addressCntnr}>
+                        <div>{loadedHouse.address}</div>
+                        <div>
+                            <FontAwesomeIcon icon={faHeart}/> 좋아요
+                        </div>
+                    </div>
                 </div>
 
                 <div className={classes.imgCntnr}>
@@ -59,20 +89,51 @@ const Detail = () => {
 
                     <div className={classes.desc}>
                         {loadedHouse.rentalFee + "원/1박"}
+                        <hr/>
+                        {loadedHouse.max + "명"}
                     </div>
-
                     <div className={classes.paymentForm}>
                         <div className={classes.payInfo}
-                             value={dayCnt}>{isDaySlt ? ("₩" + (dayCnt * pplCnt * loadedHouse.rentalFee).toLocaleString() + "원") : "가격 정보를 확인하려면 날짜를 선택하세요."}</div>
+                             value={dayCnt}>{isDaySlt ? ("₩ " + ((pplState.Adult + pplState.Child + pplState.Baby) * loadedHouse.rentalFee).toLocaleString() + " / 박") : "가격 정보를 확인하려면 날짜를 선택하세요."}</div>
                         <div className={classes.infoForm}>
                             <div className={classes.block}>
                                 <RangePicker bordered={false} onChange={dateTrigger}/>
                             </div>
-                            <input className={classes.pplCnt} type={"number"} name={"human"} min={1} max={5}
-                                   onChange={inputTrigger} value={pplCnt}/>
+                            <div className={classes.pplCntCntnr}>
+                                <div>게스트 {pplState.Adult + pplState.Child + pplState.Baby}명</div>
+                                <div>{isClicked ? <FontAwesomeIcon icon={faChevronUp} onClick={pplSltTrigger}/> :
+                                    <FontAwesomeIcon icon={faChevronDown} onClick={pplSltTrigger}/>}</div>
+                                {isClicked && <div className={classes.pplPick}>
+                                    <div className={classes.m1rem}>{"최대" + loadedHouse.max + "명"}</div>
+                                    <InputNumber addonBefore={<FontAwesomeIcon icon={faPerson}/>} value={pplState.Adult}
+                                                 min={1} max={5} prefix="성인 (13세 이상)" onChange={pplPickTriggerA}
+                                                 style={{width: '100%', height: "40px"}}/>
+                                    <InputNumber addonBefore={<FontAwesomeIcon icon={faChild}/>} value={pplState.Child}
+                                                 min={0} max={5} prefix="어린이 (2~12세)" onChange={pplPickTriggerC}
+                                                 style={{width: '100%', height: "40px"}}/>
+                                    <InputNumber addonBefore={<FontAwesomeIcon icon={faBaby}/>} value={pplState.Baby}
+                                                 min={0} max={5} prefix="유아 (2세 미만)" onChange={pplPickTriggerB}
+                                                 style={{width: '100%', height: "40px"}}/>
+                                </div>}
+                            </div>
                         </div>
-                        <Link to={"/payment"} className={classes.payment}>
-                            <div>{isDaySlt ? "예약하기" : "가능 날짜 확인하기"}</div>
+                        {isDaySlt && <div>
+                            <div style={{fontSize:"small"}}>
+                                예약 확정 전에는 요금이 청구되지 않습니다.
+                            </div>
+                            <div className={classes.addressCntnr}>
+                                <div>{"₩" + ((pplState.Adult + pplState.Child + pplState.Baby) * loadedHouse.rentalFee).toLocaleString() + "X" + dayCnt + "박"}</div>
+                                <div>{"₩" + (dayCnt * (pplState.Adult + pplState.Child + pplState.Baby) * loadedHouse.rentalFee).toLocaleString()}</div>
+                            </div>
+                            <hr/>
+                            <div className={classes.addressCntnr}>
+                                <div>총합계</div>
+                                <div>{"₩" + (dayCnt * (pplState.Adult + pplState.Child + pplState.Baby) * loadedHouse.rentalFee).toLocaleString()}</div>
+                            </div>
+                        </div>}
+                        <Link to={"/payment"} className={classes.none}>
+                            <button className={classes.payment}
+                                    disabled={false}>{isDaySlt ? "예약하기" : "가능 날짜 확인하기"}</button>
                         </Link>
                     </div>
 
@@ -84,6 +145,6 @@ const Detail = () => {
             </div>
         </Page>
     )
-}
+};
 
 export default Detail;
