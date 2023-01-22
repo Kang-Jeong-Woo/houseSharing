@@ -1,0 +1,35 @@
+.loginCntnr {
+    width: 90%;
+    margin: 0px auto;
+}
+.login {
+
+}
+
+
+
+/*소셜 로그인*/
+.SocialLgnCntnr {
+    height: 30vh;
+    padding: 2%;
+}
+.SocialLgn {
+    display: flex;
+    width: 90%;
+    height: 5vh;
+    align-items: center;
+    border: #666666 solid 1px;
+    border-radius: 1vh;
+    margin: 2rem;
+}
+.logContent {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+.socialLgnIcon {
+    margin: 0 auto;
+    font-size: x-large;
+}

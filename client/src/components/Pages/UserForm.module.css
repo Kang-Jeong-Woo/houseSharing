@@ -1,0 +1,12 @@
+.userFormCntnr {
+    border-left: #666666 1px solid;
+    width: 30%;
+    height: 70vh;
+}
+.userPic {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    overflow: hidden;
+    margin: 1rem auto;
+}

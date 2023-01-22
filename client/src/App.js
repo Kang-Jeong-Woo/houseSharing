@@ -5,9 +5,11 @@ import UserInfo from "./components/Pages/UserInfo";
 import Detail from "./components/Pages/Detail";
 import Main from "./components/Pages/Main";
 import Payment from "./components/Pages/Payment";
+import UserProvider from "./store/UserProvider";
 
 function App() {
   return (
+      <UserProvider>
       <Layout>
           <Routes>
               <Route path="/" exact={true} element={<Main/>}/>
@@ -16,6 +18,7 @@ function App() {
               <Route path="/payment" element={<Payment/>}/>
           </Routes>
       </Layout>
+      </UserProvider>
   );
 }
 

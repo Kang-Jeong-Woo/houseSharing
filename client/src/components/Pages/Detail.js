@@ -118,7 +118,7 @@ const Detail = () => {
                             </div>
                         </div>
                         {isDaySlt && <div>
-                            <div style={{fontSize:"small"}}>
+                            <div style={{fontSize: "small"}}>
                                 예약 확정 전에는 요금이 청구되지 않습니다.
                             </div>
                             <div className={classes.addressCntnr}>
@@ -136,9 +136,7 @@ const Detail = () => {
                                     disabled={false}>{isDaySlt ? "예약하기" : "가능 날짜 확인하기"}</button>
                         </Link>
                     </div>
-
                 </div>
-
                 <div className={classes.reviewCntnr}>{"여기가 후기 section"}</div>
                 <div className={classes.locationCntnr}>{"여기가 카카오 지도"}</div>
                 <div className={classes.hostCntnr}>{"여기가 집주인 소통 창구"}</div>

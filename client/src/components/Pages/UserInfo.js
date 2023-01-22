@@ -1,9 +1,15 @@
-import {Fragment} from "react";
-
+import classes from "./UserInfo.module.css";
+import userContext from "../../store/user-context";
+import {useContext} from "react";
 const UserInfo = props => {
-    return(<Fragment>
-        <h1>사용자 수정 페이지</h1>
-    </Fragment>)
+    const userCtx = useContext(userContext);
+
+    return(
+        <div className={classes.userInfoCntnr}>
+            <h2>{"안녕하세요 " + userCtx.name + " 입니다"}</h2>
+
+        </div>
+    )
 }
 
 export default UserInfo;
