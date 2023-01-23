@@ -6,6 +6,7 @@ import Detail from "./components/Pages/Detail";
 import Main from "./components/Pages/Main";
 import Payment from "./components/Pages/Payment";
 import UserProvider from "./store/UserProvider";
+import RegForm from "./components/Pages/RegForm";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
               <Route path="/" exact={true} element={<Main/>}/>
               <Route path="/user-info" element={<UserInfo/>}/>
               <Route path="/detail" element={<Detail/>}/>
+              <Route path="/registerHouse" element={<RegForm/>}/>
               <Route path="/payment" element={<Payment/>}/>
           </Routes>
       </Layout>

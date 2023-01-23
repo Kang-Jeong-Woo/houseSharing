@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import loading from "../../assets/img/loading.gif";
 import Slider from "../Layout/Slider";
 
-const NewRegForm = props => {
+const Main = props => {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedHouseList, setLoadedHouseList] = useState([]);
 
@@ -36,10 +36,10 @@ const NewRegForm = props => {
     return (<Fragment>
         <Slider/>
         {loadedHouseList.map(house => (
-            <div className={classes.container}>
+            <div className={classes.container} key={house.id}>
                 <Link to={"/detail"} state={{houseId: house.id}}>
                     <Card onPadding={"1rem"}>
-                        <img key={house.id} src={house.img} alt={house.name}/>
+                        <img src={house.img} alt={house.name}/>
                         <div className={classes.content}>
                             <div className={classes.title}>{house.name}</div>
                             <div className={classes.comment}>{house.comment}</div>
@@ -52,4 +52,4 @@ const NewRegForm = props => {
     </Fragment>)
 }
 
-export default NewRegForm;
+export default Main;
